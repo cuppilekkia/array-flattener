@@ -5,10 +5,11 @@
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc",
-    "start": "tsc && node dist/index.js",
+    "start": "npm run clear && tsc && node dist/example.js",
+    "clear": "rm -rf ./dist",
     "lint": "eslint . --ext .ts",
-    "test": "jest --runInBand --detectOpenHandles --colors --verbose",
-    "test:watch": "jest --watch --detectOpenHandles"
+    "test": "jest --runInBand --colors --verbose",
+    "test:watch": "jest --watch"
   },
   "keywords": [],
   "author": "Antonio Coppola",
